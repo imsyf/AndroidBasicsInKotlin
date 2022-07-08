@@ -11,16 +11,16 @@ the roll will be shown in a TextView on the screen.
 
 ## Result
 
-<table width="100%">
+<table>
   <tr>
     <th>Initial display</th>
     <th>Once user tap the button</th>
   </tr>
   <tr>
-    <td width="50%">
+    <td>
       <img src="images/Screenshot from 2022-07-08 18-34-59.png?raw=true" />
     </td>
-    <td width="50%">
+    <td>
       <img src="images/Screenshot from 2022-07-08 18-35-14.png?raw=true" />
     </td>
   </tr>
