@@ -14,10 +14,14 @@ provided by Android Studio.
 <table width="100%">
   <tr>
     <th>Each TextView is styled individually</th>
+    <th>All TextViews share common styling</th>
   </tr>
   <tr>
-    <td width="100%">
+    <td width="50%">
       <img src="images/Screenshot from 2022-07-08 14-11-39.png?raw=true" />
+    </td>
+    <td width="50%">
+      <img src="images/Screenshot from 2022-07-08 14-21-23.png?raw=true" />
     </td>
   </tr>
 </table>
