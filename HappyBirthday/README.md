@@ -8,20 +8,17 @@ provided by Android Studio.
 - Set up an Android emulator and real device
 - Run the Android app on them
 - Lay out views into view group and customize them by adding new attributes
+- Display image from local drawable resource, and came across [this problem](https://stackoverflow.com/questions/40835514/android-canvas-drawing-too-large-bitmap)
 
 ## Result
 
 <table width="100%">
   <tr>
-    <th>Each TextView is styled individually</th>
-    <th>All TextViews share common styling</th>
+    <th>Texts with image as a background</th>
   </tr>
   <tr>
-    <td width="50%">
-      <img src="images/Screenshot from 2022-07-08 14-11-39.png?raw=true" />
-    </td>
-    <td width="50%">
-      <img src="images/Screenshot from 2022-07-08 14-21-23.png?raw=true" />
+    <td>
+      <img src="images/Screenshot from 2022-07-08 14-58-34.png?raw=true" />
     </td>
   </tr>
 </table>
