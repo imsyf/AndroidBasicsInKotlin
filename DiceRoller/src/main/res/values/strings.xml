@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Dice Roller</string>
     <string name="roll">Roll</string>
+    <string name="click_the_roll_button">Click the roll button!</string>
 </resources>
