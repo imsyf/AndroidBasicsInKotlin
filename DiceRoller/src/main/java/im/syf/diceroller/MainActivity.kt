@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
                 else -> R.drawable.dice_6
             }
 
+            image.animate().rotationBy(360f).start()
             image.setImageResource(id)
             image.contentDescription = getString(R.string.dice_side, side)
         }
