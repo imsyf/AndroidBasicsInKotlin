@@ -9,6 +9,7 @@ the roll will be shown in a TextView on the screen.
 - Capture user interaction
 - Then manipulate other view component based on that
 - Rotate view with simple animation API
+- Unit test
 
 ## Result
 
