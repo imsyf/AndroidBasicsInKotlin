@@ -1,6 +1,6 @@
 package im.syf.diceroller
 
-import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -10,7 +10,9 @@ import org.junit.Test
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun generate_number() {
+        val dice = Dice(6)
+        val result = dice.roll()
+        assertTrue("The value of result was not between 1 and 6", result in 1..6)
     }
 }
