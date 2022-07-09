@@ -8,6 +8,7 @@ the roll will be shown in a TextView on the screen.
 - Get a reference to a piece of UI (view component) in Kotlin code
 - Capture user interaction
 - Then manipulate other view component based on that
+- Rotate view with simple animation API
 
 ## Result
 
@@ -32,7 +33,7 @@ the roll will be shown in a TextView on the screen.
       <img src="images/Screenshot from 2022-07-09 13-03-26.png?raw=true" />
     </td>
     <td>
-      <img src="images/Screenshot from 2022-07-09 13-04-19.png?raw=true" />
+      <img src="images/Screenshot from 2022-07-09 13-23-55.gif?raw=true" />
     </td>
   </tr>
 </table>
