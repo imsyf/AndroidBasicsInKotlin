@@ -1,8 +1,10 @@
 package im.syf.diceroller
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +16,14 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button)
         val dice = Dice(6)
 
+        var firstTime = true
         rollButton.setOnClickListener {
+            if (firstTime) {
+                findViewById<TextView>(R.id.text).visibility = View.GONE
+                image.visibility = View.VISIBLE
+                firstTime = false
+            }
+
             val side = dice.roll()
             val id = when (side) {
                 1 -> R.drawable.dice_1

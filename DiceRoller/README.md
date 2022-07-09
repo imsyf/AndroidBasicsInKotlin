@@ -13,15 +13,26 @@ the roll will be shown in a TextView on the screen.
 
 <table>
   <tr>
+    <th>Output</th>
     <th>Initial display</th>
     <th>Once user tap the button</th>
   </tr>
   <tr>
+    <td>text</td>
     <td>
       <img src="images/Screenshot from 2022-07-08 18-34-59.png?raw=true" />
     </td>
     <td>
       <img src="images/Screenshot from 2022-07-08 18-35-14.png?raw=true" />
+    </td>
+  </tr>
+  <tr>
+    <td>image</td>
+    <td>
+      <img src="images/Screenshot from 2022-07-09 13-03-26.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot from 2022-07-09 13-04-19.png?raw=true" />
     </td>
   </tr>
 </table>
