@@ -21,7 +21,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun calculateTip() {
         val input = binding.costOfService.text.toString()
-        val cost = input.toDouble()
+        val cost = input.toDoubleOrNull()
+
+        if (cost == null || cost == 0.0) {
+            displayTip(0.0)
+            return
+        }
+
         val percentage = when (binding.tipOptions.checkedRadioButtonId) {
             R.id.option_twenty -> 0.2
             R.id.option_eighteen -> 0.18
@@ -33,6 +39,10 @@ class MainActivity : AppCompatActivity() {
             tip = ceil(tip)
         }
 
+        displayTip(tip)
+    }
+
+    private fun displayTip(tip: Double) {
         val formatted = NumberFormat.getCurrencyInstance(Locale.US).format(tip)
         binding.tipResult.text = getString(R.string.tip_amount, formatted)
     }
