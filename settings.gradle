@@ -16,3 +16,4 @@ rootProject.name = "AndroidBasicsInKotlin"
 include ':HappyBirthday'
 include ':DiceRoller'
 include ':Lemonade'
+include ':TipTime'
