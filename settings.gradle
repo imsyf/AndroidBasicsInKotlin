@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidBasicsInKotlin"
 include ':HappyBirthday'
 include ':DiceRoller'
+include ':Lemonade'
