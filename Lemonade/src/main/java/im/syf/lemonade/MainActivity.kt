@@ -152,7 +152,12 @@ class MainActivity : AppCompatActivity() {
         // TODO: Additionally, for each state, the lemonImage should be set to the corresponding
         //  drawable from the drawable resources. The drawables have the same names as the strings
         //  but remember that they are drawables, not strings.
-        lemonImage?.setImageResource(drawableRes)
+        lemonImage?.setImageResourceAndTag(drawableRes)
+    }
+
+    private fun ImageView.setImageResourceAndTag(@DrawableRes id: Int) {
+        setImageResource(id)
+        tag = id
     }
 
     /**
