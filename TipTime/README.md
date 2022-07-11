@@ -8,20 +8,41 @@ Build an app to help calculate tip amount based on user input.
 
 - UI components, such as editable text fields, radio buttons, switches
 - View binding
+- Customize color theme for light/dark mode
 
 ## Result
 
 <table>
   <tr>
-    <th>Empty input</th>
-    <th>Valid input</th>
+    <th>Input</th>
+    <th>Old theme</th>
+    <th colspan="2">New light/dark theme</th>
   </tr>
   <tr>
     <td>
-      <img src="images/Screenshot_20220711_052542.png?raw=true" />
+      Empty
     </td>
     <td>
-      <img src="images/Screenshot_20220711_052739.png?raw=true" />
+      <img src="images/Screenshot_20220711_101252.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot_20220711_095945.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot_20220711_100433.png?raw=true" />
     </td>
   </tr>
+  <tr>
+    <td>
+      Valid
+    </td>
+    <td>
+      <img src="images/Screenshot_20220711_101144.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot_20220711_100153.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot_20220711_100545.png?raw=true" />
+    </td>
 </table>
