@@ -12,6 +12,7 @@ Build an app to help calculate tip amount based on user input.
 - Customize app icon
 - Material Design Components
 - Vector drawables
+- Text styling
 
 ## Result
 
