@@ -19,8 +19,8 @@ Build an app to help calculate tip amount based on user input.
 <table>
   <tr>
     <th>Input</th>
-    <th>Old theme</th>
-    <th colspan="2">New light/dark theme</th>
+    <th>Initial</th>
+    <th colspan="2">Final</th>
   </tr>
   <tr>
     <td>
@@ -30,10 +30,10 @@ Build an app to help calculate tip amount based on user input.
       <img src="images/Screenshot_20220711_101252.png?raw=true" />
     </td>
     <td>
-      <img src="images/Screenshot_20220711_095945.png?raw=true" />
+      <img src="images/Screenshot_20220711_174756.png?raw=true" />
     </td>
     <td>
-      <img src="images/Screenshot_20220711_100433.png?raw=true" />
+      <img src="images/Screenshot_20220711_175420.png?raw=true" />
     </td>
   </tr>
   <tr>
@@ -44,9 +44,9 @@ Build an app to help calculate tip amount based on user input.
       <img src="images/Screenshot_20220711_101144.png?raw=true" />
     </td>
     <td>
-      <img src="images/Screenshot_20220711_100153.png?raw=true" />
+      <img src="images/Screenshot_20220711_174844.png?raw=true" />
     </td>
     <td>
-      <img src="images/Screenshot_20220711_100545.png?raw=true" />
+      <img src="images/Screenshot_20220711_175452.png?raw=true" />
     </td>
 </table>
