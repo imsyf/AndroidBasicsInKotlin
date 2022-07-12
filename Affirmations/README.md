@@ -1,4 +1,4 @@
-![ic_launcher_tiptime](src/main/res/mipmap-xhdpi/ic_launcher_round.webp?raw=true) ![ic_launcher_tiptime](images/Screenshot_20220712_164934.png?raw=true)
+![ic_launcher_tiptime](src/main/res/mipmap-xhdpi/ic_launcher_affirmations_round.png?raw=true) ![ic_launcher_tiptime](images/Screenshot_20220712_171057.png?raw=true)
 
 # Affirmations
 
