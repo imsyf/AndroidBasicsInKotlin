@@ -50,3 +50,9 @@ Build an app to help calculate tip amount based on user input.
       <img src="images/Screenshot_20220711_175452.png?raw=true" />
     </td>
 </table>
+
+## Instrumented tests
+
+![Screenshot from 2022-07-13 08-24-11](https://user-images.githubusercontent.com/29587914/178628613-05a967b6-d59f-4c6f-a614-4445b4d06f9f.png)
+
+[Recording from 2022-07-13 08-23-13.webm](https://user-images.githubusercontent.com/29587914/178628672-b0c6e93b-944c-49e0-83d2-3ce30ba93aea.webm)
