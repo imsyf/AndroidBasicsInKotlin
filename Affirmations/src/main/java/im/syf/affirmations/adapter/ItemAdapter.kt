@@ -3,6 +3,7 @@ package im.syf.affirmations.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import im.syf.affirmations.R
@@ -22,11 +23,13 @@ class ItemAdapter(
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = data[position]
         holder.itemTitle.setText(item.stringResourceId)
+        holder.itemImage.setImageResource(item.imageResourceId)
     }
 
     override fun getItemCount(): Int = data.size
 
     class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val itemTitle: TextView = view.findViewById(R.id.item_title)
+        val itemImage: ImageView = view.findViewById(R.id.item_image)
     }
 }
