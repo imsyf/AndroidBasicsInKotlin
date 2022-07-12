@@ -1,3 +1,5 @@
+![ic_launcher_tiptime](src/main/res/mipmap-xhdpi/ic_launcher_round.webp?raw=true) ![ic_launcher_tiptime](images/Screenshot_20220712_164934.png?raw=true)
+
 # Affirmations
 
 A simple app that displays ten positive affirmations as text in a scrolling list.
@@ -10,3 +12,18 @@ A simple app that displays ten positive affirmations as text in a scrolling list
 - Resource annotation
 
 ## Result
+
+<table>
+  <tr>
+    <th>Light</th>
+    <th>Dark</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="images/Screenshot_20220712_162810.png?raw=true" />
+    </td>
+    <td>
+      <img src="images/Screenshot_20220712_162517.png?raw=true" />
+    </td>
+  </tr>
+</table>
