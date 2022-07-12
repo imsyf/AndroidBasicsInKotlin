@@ -10,6 +10,8 @@ Build an app to help calculate tip amount based on user input.
 - View binding
 - Customize color theme for light/dark mode
 - Customize app icon
+- Material Design Components
+- Vector drawables
 
 ## Result
 
