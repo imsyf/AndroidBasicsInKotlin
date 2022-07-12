@@ -1,4 +1,4 @@
-![ic_launcher_tiptime](src/main/res/mipmap-xhdpi/ic_launcher_round.webp?raw=true) ![ic_launcher_tiptime](images/Screenshot_20220712_081514.png?raw=true)
+![ic_launcher_tiptime](src/main/res/mipmap-xhdpi/ic_launcher_tiptime_round.png?raw=true) ![ic_launcher_tiptime](images/Screenshot_20220712_082447.png?raw=true)
 
 # Tip Time
 
@@ -9,6 +9,7 @@ Build an app to help calculate tip amount based on user input.
 - UI components, such as editable text fields, radio buttons, switches
 - View binding
 - Customize color theme for light/dark mode
+- Customize app icon
 
 ## Result
 
