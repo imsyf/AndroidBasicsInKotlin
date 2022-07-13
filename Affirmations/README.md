@@ -36,3 +36,10 @@ A simple app that displays ten positive affirmations as text in a scrolling list
 Check if `ItemAdapter` item count is equal to the number of data passed to it.
 
 ![Unit test](images/Screenshot_20220713_102647.png?raw=true)
+
+### UI test
+
+Check if the last item is displayed.
+
+Failed to run, yield error [#1](https://github.com/imsyf/AndroidBasicsInKotlin/issues/1).
+![Screenshot from 2022-07-13 11-07-24](https://user-images.githubusercontent.com/29587914/178648611-d595ec7d-cdb3-4a34-919d-386d754f8ba3.png)
