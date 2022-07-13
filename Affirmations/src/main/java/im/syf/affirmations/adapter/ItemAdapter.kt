@@ -1,5 +1,6 @@
 package im.syf.affirmations.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import im.syf.affirmations.R
 import im.syf.affirmations.model.Affirmation
 
 class ItemAdapter(
+    private val context: Context,
     private val data: List<Affirmation>
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
@@ -22,7 +24,7 @@ class ItemAdapter(
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = data[position]
-        holder.itemTitle.setText(item.stringResourceId)
+        holder.itemTitle.text = context.getString(item.stringResourceId)
         holder.itemImage.setImageResource(item.imageResourceId)
     }
 

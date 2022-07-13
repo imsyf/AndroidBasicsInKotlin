@@ -10,6 +10,7 @@ A simple app that displays ten positive affirmations as text in a scrolling list
 - Organize code into packages
 - RecyclerView: view holder, adapter, item layout, layout manager
 - Resource annotation
+- Unit testing by mocking complex object we don't own
 
 ## Result
 
@@ -27,3 +28,11 @@ A simple app that displays ten positive affirmations as text in a scrolling list
     </td>
   </tr>
 </table>
+
+## Tests result
+
+### Unit test
+
+Check if `ItemAdapter` item count is equal to the number of data passed to it.
+
+![Unit test](images/Screenshot_20220713_102647.png?raw=true)
