@@ -11,6 +11,8 @@ A simple app that displays ten positive affirmations as text in a scrolling list
 - RecyclerView: view holder, adapter, item layout, layout manager
 - Resource annotation
 - Unit testing by mocking complex object we don't own
+- UI testing
+- Multidex
 
 ## Result
 
@@ -41,5 +43,6 @@ Check if `ItemAdapter` item count is equal to the number of data passed to it.
 
 Check if the last item is displayed.
 
-Failed to run, yield error [#1](https://github.com/imsyf/AndroidBasicsInKotlin/issues/1).
-![Screenshot from 2022-07-13 11-07-24](https://user-images.githubusercontent.com/29587914/178648611-d595ec7d-cdb3-4a34-919d-386d754f8ba3.png)
+![UI test](images/Screenshot_20220713_134041.png?raw=true)
+
+[Recording from 2022-07-13 13-44-31.webm](https://user-images.githubusercontent.com/29587914/178668942-173dd91c-92de-41fa-aec5-5a31fd8e5a6b.webm)
