@@ -2,10 +2,9 @@ package im.syf.words
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
+import im.syf.words.databinding.ItemViewBinding
 
 class WordAdapter(
     context: Context,
@@ -34,21 +33,19 @@ class WordAdapter(
     /**
      * Provides a reference for the views needed to display items in your list.
      */
-    class WordViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
-        val button: Button = view.findViewById(R.id.button_item)
-    }
+    class WordViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root)
 
     /**
-     * Creates new views with [R.layout.item_view] as its template
+     * Creates new views with [ItemViewBinding] as its template
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WordViewHolder {
-        val layout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = ItemViewBinding.inflate(layoutInflater, parent, false)
 
         // Setup custom accessibility delegate to set the text read
-        layout.accessibilityDelegate = Accessibility
+        binding.root.accessibilityDelegate = Accessibility
 
-        return WordViewHolder(layout)
+        return WordViewHolder(binding)
     }
 
     /**
@@ -58,10 +55,10 @@ class WordAdapter(
         val item = filteredWords[position]
 
         // Needed to call startActivity
-        val context = holder.view.context
+        val context = holder.binding.root.context
 
         // Set the text of the WordViewHolder
-        holder.button.text = item
+        holder.binding.buttonItem.text = item
     }
 
     override fun getItemCount(): Int = filteredWords.size
