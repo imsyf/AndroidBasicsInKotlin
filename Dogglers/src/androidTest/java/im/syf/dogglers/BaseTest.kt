@@ -1,6 +1,8 @@
 package im.syf.dogglers
 
+import android.content.Context
 import androidx.annotation.DrawableRes
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
@@ -11,6 +13,9 @@ import im.syf.dogglers.data.DataSource
 open class BaseTest {
 
     val lastPosition = DataSource.dogs.size - 1
+
+    private val targetContext = ApplicationProvider.getApplicationContext<Context>()
+    private val resources = targetContext.resources
 
     /**
      * Check the content of a card
@@ -28,9 +33,9 @@ open class BaseTest {
     ) {
         onView(withText(name))
             .check(matches(isDisplayed()))
-        onView(withText(age))
+        onView(withText(resources.getString(R.string.dog_age, age)))
             .check(matches(isDisplayed()))
-        onView(withText(hobbies))
+        onView(withText(resources.getString(R.string.dog_hobbies, hobbies)))
             .check(matches(isDisplayed()))
         onView(withDrawable(imageResource))
             .check(matches(isDisplayed()))
@@ -40,6 +45,7 @@ open class BaseTest {
      * Check the content of the first card
      */
     fun checkFirstPosition() {
-        hasListItemContent("Tzeitel", "7", "sunbathing", R.drawable.tzeitel)
+        val (imageResourceId, name, age, hobbies) = DataSource.dogs.first()
+        hasListItemContent(name, age, hobbies, imageResourceId)
     }
 }

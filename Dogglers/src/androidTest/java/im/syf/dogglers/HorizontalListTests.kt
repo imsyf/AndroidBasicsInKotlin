@@ -2,9 +2,10 @@ package im.syf.dogglers
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions.swipeLeft
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.contrib.RecyclerViewActions.scrollTo
 import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
+import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
@@ -38,7 +39,11 @@ class HorizontalListTests : BaseTest() {
 
     @Test
     fun horizontal_scrolling() {
-        onView(withId(R.id.horizontal_recycler_view)).perform(swipeLeft())
+        onView(withId(R.id.horizontal_recycler_view)).perform(
+            scrollTo<RecyclerView.ViewHolder>(
+                hasDescendant(withText("Frankie"))
+            )
+        )
         onView(withText("Frankie")).check(matches(isDisplayed()))
     }
 

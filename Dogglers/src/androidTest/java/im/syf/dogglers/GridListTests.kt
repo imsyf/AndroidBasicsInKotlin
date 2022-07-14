@@ -4,7 +4,9 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.swipeUp
 import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.contrib.RecyclerViewActions.scrollTo
 import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
+import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
@@ -30,6 +32,11 @@ class GridListTests : BaseTest() {
 
     @Test
     fun grid_list_content_on_first_page() {
+        onView(withId(R.id.grid_recycler_view)).perform(
+            scrollTo<RecyclerView.ViewHolder>(
+                hasDescendant(withText("Nox"))
+            )
+        )
         onView(withText("Nox")).check(matches(isDisplayed()))
     }
 
