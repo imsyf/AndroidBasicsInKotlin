@@ -1,3 +1,5 @@
+![ic_launcher_lemonade](src/main/res/mipmap-xhdpi/ic_launcher_lemonade_round.png?raw=true) ![ic_launcher_lemonade](images/Screenshot_20220715_063227.png?raw=true)
+
 # Lemonade
 
 The final pathway of Unit 1, the first independent project for Android Basics in Kotlin.
