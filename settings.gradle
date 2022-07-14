@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidBasicsInKotlin"
 include ':Inventory'
 include ':DevByte'
+include ':Words'
