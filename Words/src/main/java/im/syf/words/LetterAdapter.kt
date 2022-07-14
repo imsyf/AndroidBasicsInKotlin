@@ -1,5 +1,6 @@
 package im.syf.words
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -32,8 +33,17 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
      * Replaces the content of an existing view with new data
      */
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
-        val item = list[position]
-        holder.binding.buttonItem.text = item.toString()
+        val item = list[position].toString()
+        with(holder.binding.buttonItem) {
+            text = item
+            setOnClickListener {
+                val intent = Intent(context, DetailActivity::class.java).apply {
+                    putExtra(DetailActivity.LETTER, item)
+                }
+
+                context.startActivity(intent)
+            }
+        }
     }
 
     override fun getItemCount(): Int = list.size

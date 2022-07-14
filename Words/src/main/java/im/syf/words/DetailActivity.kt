@@ -17,13 +17,19 @@ class DetailActivity : AppCompatActivity() {
         // Retrieve the LETTER from the Intent extras
         // intent.extras.getString returns String? (String or null)
         // so toString() guarantees that the value will be a String
-        val letterId = "A"
+        val letterId = intent.extras?.getString(LETTER) ?: "A"
 
-        binding.recyclerView.adapter = WordAdapter(this, letterId)
-        binding.recyclerView.addItemDecoration(
-            DividerItemDecoration(this, DividerItemDecoration.VERTICAL)
-        )
+        with(binding.recyclerView) {
+            adapter = WordAdapter(this@DetailActivity, letterId)
+            addItemDecoration(
+                DividerItemDecoration(this@DetailActivity, DividerItemDecoration.VERTICAL)
+            )
+        }
 
         title = getString(R.string.detail_prefix, letterId)
+    }
+
+    companion object {
+        const val LETTER = "letter"
     }
 }
