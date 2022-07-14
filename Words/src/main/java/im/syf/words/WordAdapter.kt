@@ -1,6 +1,8 @@
 package im.syf.words
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -54,11 +56,16 @@ class WordAdapter(
     override fun onBindViewHolder(holder: WordViewHolder, position: Int) {
         val item = filteredWords[position]
 
-        // Needed to call startActivity
-        val context = holder.binding.root.context
-
         // Set the text of the WordViewHolder
-        holder.binding.buttonItem.text = item
+        with(holder.binding.buttonItem) {
+            text = item
+            setOnClickListener {
+                val queryUrl = Uri.parse("${DetailActivity.SEARCH_PREFIX}$item")
+                val intent = Intent(Intent.ACTION_VIEW, queryUrl)
+
+                context.startActivity(intent)
+            }
+        }
     }
 
     override fun getItemCount(): Int = filteredWords.size
