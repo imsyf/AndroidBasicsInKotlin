@@ -15,7 +15,10 @@ The app demonstrates the use of Intents in two ways:
 
 ## Topics covered in this module
 
-- Intent
--
+- Intent, extras
+- Menu item
+- Layout manager(s)
 
 ## Result
+
+![Words](https://user-images.githubusercontent.com/29587914/178991718-8e6a445f-eb09-429b-b580-1ce73d08d36e.gif)
