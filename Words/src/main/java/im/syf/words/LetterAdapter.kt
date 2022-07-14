@@ -1,10 +1,9 @@
 package im.syf.words
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
+import im.syf.words.databinding.ItemViewBinding
 
 class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
 
@@ -14,21 +13,19 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
     /**
      * Provides a reference for the views needed to display items in your list.
      */
-    class LetterViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val button: Button = view.findViewById(R.id.button_item)
-    }
+    class LetterViewHolder(val binding: ItemViewBinding) : RecyclerView.ViewHolder(binding.root)
 
     /**
-     * Creates new views with [R.layout.item_view] as its template
+     * Creates new views with [ItemViewBinding] as its template
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LetterViewHolder {
-        val layout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_view, parent, false)
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val binding = ItemViewBinding.inflate(layoutInflater, parent, false)
 
         // Setup custom accessibility delegate to set the text read
-        layout.accessibilityDelegate = Accessibility
+        binding.root.accessibilityDelegate = Accessibility
 
-        return LetterViewHolder(layout)
+        return LetterViewHolder(binding)
     }
 
     /**
@@ -36,7 +33,7 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
      */
     override fun onBindViewHolder(holder: LetterViewHolder, position: Int) {
         val item = list[position]
-        holder.button.text = item.toString()
+        holder.binding.buttonItem.text = item.toString()
     }
 
     override fun getItemCount(): Int = list.size
