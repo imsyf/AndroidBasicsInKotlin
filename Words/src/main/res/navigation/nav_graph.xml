@@ -9,6 +9,24 @@
         android:id="@+id/letterListFragment"
         android:name="im.syf.words.LetterListFragment"
         android:label="fragment_letter_list"
-        tools:layout="@layout/fragment_letter_list" />
+        tools:layout="@layout/fragment_letter_list">
+
+        <action
+            android:id="@+id/to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/wordListFragment"
+        android:name="im.syf.words.WordListFragment"
+        android:label="fragment_word_list"
+        tools:layout="@layout/fragment_word_list">
+
+        <argument
+            android:name="letter"
+            app:argType="string" />
+
+    </fragment>
 
 </navigation>

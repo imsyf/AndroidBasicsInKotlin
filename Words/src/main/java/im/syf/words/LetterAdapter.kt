@@ -1,8 +1,8 @@
 package im.syf.words
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import im.syf.words.databinding.ItemViewBinding
 
@@ -37,11 +37,8 @@ class LetterAdapter : RecyclerView.Adapter<LetterAdapter.LetterViewHolder>() {
         with(holder.binding.buttonItem) {
             text = item
             setOnClickListener {
-                val intent = Intent(context, DetailActivity::class.java).apply {
-                    putExtra(DetailActivity.LETTER, item)
-                }
-
-                context.startActivity(intent)
+                val action = LetterListFragmentDirections.toWordListFragment(item)
+                findNavController().navigate(action)
             }
         }
     }
