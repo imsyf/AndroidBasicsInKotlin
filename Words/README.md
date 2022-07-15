@@ -18,6 +18,8 @@ The app demonstrates the use of Intents in two ways:
 - Intent, extras
 - Menu item
 - Layout manager(s)
+- Fragment
+- Navigation component: NavHost, graph, controller
 
 ## Result
 
