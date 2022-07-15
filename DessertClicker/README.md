@@ -9,6 +9,8 @@ A game about making desserts. Press the button, make a dessert, earn the big buc
 - Activity lifecycle
 - ImageButton
 - Data binding
--
+- State restoration during configuration state
 
 ## Result
+
+[Dessert.webm](https://user-images.githubusercontent.com/29587914/179137601-e5e039d8-eb2d-4aaf-a0a5-da924cf2d417.webm)
