@@ -32,3 +32,7 @@ Check if the screen navigate to word list when letter list item is clicked.
 ![NavigationTests](images/Screenshot_20220716_094757.png?raw=true)
 
 [NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179336792-4711f137-cb46-4572-9f51-f5d68616e4d3.webm)
+
+Order of test annotations
+
+![TestAnnotations](images/Screenshot_20220716_102839.png?raw=true)
