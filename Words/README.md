@@ -19,8 +19,16 @@ The app demonstrates the use of Intents in two ways:
 - Menu item
 - Layout manager(s)
 - Fragment
-- Navigation component: NavHost, graph, controller, safe args
+- Navigation component: NavHost, graph, controller, safe args, testing
 
 ## Result
 
 ![Words](https://user-images.githubusercontent.com/29587914/178991718-8e6a445f-eb09-429b-b580-1ce73d08d36e.gif)
+
+### Navigation test
+
+Check if the screen navigate to word list when letter list item is clicked.
+
+![NavigationTests](images/Screenshot_20220716_094757.png?raw=true)
+
+[NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179336792-4711f137-cb46-4572-9f51-f5d68616e4d3.webm)
