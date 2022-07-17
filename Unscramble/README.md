@@ -11,6 +11,7 @@ to make a word using all the letters from the displayed scrambled word.
 - ViewModel
 - Dialog
 - Kotlin backing property
+- LiveData
 
 ## Result
 
