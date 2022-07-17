@@ -37,10 +37,11 @@ class GameFragment : Fragment() {
         Log.d("GameFragment", "GameFragment created/re-created!")
         with(viewModel) {
             val word = currentScrambledWord.value
+            val count = currentWordCount.value
 
             Log.d(
                 "GameFragment",
-                "Word: $word; Score: $score; Count: $currentWordCount;"
+                "Word: $word; Score: $score; Count: $count;"
             )
         }
         return binding.root
@@ -54,12 +55,17 @@ class GameFragment : Fragment() {
         binding.skip.setOnClickListener { onSkipWord() }
 
         // Update the UI
-        updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, viewModel.score)
 
         // Observe the currentScrambledWord LiveData
         viewModel.currentScrambledWord.observe(viewLifecycleOwner) {
             binding.textViewUnscrambledWord.text = it
+        }
+
+        viewModel.currentWordCount.observe(viewLifecycleOwner) {
+            binding.wordCount.text = getString(
+                R.string.word_count, it, MAX_NO_OF_WORDS
+            )
         }
     }
 
@@ -74,9 +80,7 @@ class GameFragment : Fragment() {
             setErrorTextField(false)
             binding.score.text = getString(R.string.score, viewModel.score)
 
-            if (viewModel.nextWord()) {
-                updateNextWordOnScreen()
-            } else {
+            if (!viewModel.nextWord()) {
                 showFinalScoreDialog()
             }
         } else {
@@ -91,7 +95,6 @@ class GameFragment : Fragment() {
     private fun onSkipWord() {
         if (viewModel.nextWord()) {
             setErrorTextField(false)
-            updateNextWordOnScreen()
         } else {
             showFinalScoreDialog()
         }
@@ -105,7 +108,6 @@ class GameFragment : Fragment() {
         viewModel.reinitializeData()
         binding.score.text = getString(R.string.score, viewModel.score)
         setErrorTextField(false)
-        updateNextWordOnScreen()
     }
 
     /*
@@ -126,17 +128,6 @@ class GameFragment : Fragment() {
             binding.textField.isErrorEnabled = false
             binding.textInputEditText.text = null
         }
-    }
-
-    /*
-     * Displays the next scrambled word on screen.
-     */
-    private fun updateNextWordOnScreen() {
-        binding.wordCount.text = getString(
-            R.string.word_count,
-            viewModel.currentWordCount,
-            MAX_NO_OF_WORDS
-        )
     }
 
     /**
