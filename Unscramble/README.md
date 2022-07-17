@@ -11,8 +11,9 @@ to make a word using all the letters from the displayed scrambled word.
 - ViewModel
 - Dialog
 - Kotlin backing property
-- LiveData
+- LiveData: transformation map
 - Data binding: inflating layout, expression
+- Spannable to make individual letter readable for talkback
 
 ## Result
 
