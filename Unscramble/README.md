@@ -12,6 +12,7 @@ to make a word using all the letters from the displayed scrambled word.
 - Dialog
 - Kotlin backing property
 - LiveData
+- Data binding: inflating layout, expression
 
 ## Result
 
