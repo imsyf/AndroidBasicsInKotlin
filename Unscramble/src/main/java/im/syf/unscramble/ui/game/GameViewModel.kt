@@ -3,6 +3,7 @@ package im.syf.unscramble.ui.game
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import im.syf.unscramble.ui.game.Words.MAX_NO_OF_WORDS
+import im.syf.unscramble.ui.game.Words.SCORE_INCREASE
 
 class GameViewModel : ViewModel() {
 
@@ -25,6 +26,14 @@ class GameViewModel : ViewModel() {
     init {
         Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
+    }
+
+    fun isUserWordCorrect(playerWord: String): Boolean {
+        if (playerWord.equals(currentWord, true)) {
+            increaseScore()
+            return true
+        }
+        return false
     }
 
     /**
@@ -58,6 +67,10 @@ class GameViewModel : ViewModel() {
             ++_currentWordCount
             wordsList.add(currentWord)
         }
+    }
+
+    private fun increaseScore() {
+        _score += SCORE_INCREASE
     }
 
     override fun onCleared() {
