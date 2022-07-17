@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/flavorFragment"
+        android:name="im.syf.cupcake.FlavorFragment"
+        android:label="FlavorFragment"
+        tools:layout="@layout/fragment_flavor" />
+
+    <fragment
+        android:id="@+id/pickupFragment"
+        android:name="im.syf.cupcake.PickupFragment"
+        android:label="PickupFragment"
+        tools:layout="@layout/fragment_pickup" />
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="im.syf.cupcake.StartFragment"
+        android:label="StartFragment"
+        tools:layout="@layout/fragment_start" />
+
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="im.syf.cupcake.SummaryFragment"
+        android:label="SummaryFragment"
+        tools:layout="@layout/fragment_summary" />
+
+</navigation>
