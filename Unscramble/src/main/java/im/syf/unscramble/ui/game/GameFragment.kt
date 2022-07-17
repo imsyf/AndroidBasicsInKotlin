@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import im.syf.unscramble.R
 import im.syf.unscramble.databinding.FragmentGameBinding
 import im.syf.unscramble.ui.game.Words.MAX_NO_OF_WORDS
@@ -46,8 +47,7 @@ class GameFragment : Fragment() {
 
         // Update the UI
         updateNextWordOnScreen()
-        binding.score.text = getString(R.string.score, 0)
-        binding.wordCount.text = getString(R.string.word_count, 0, MAX_NO_OF_WORDS)
+        binding.score.text = getString(R.string.score, viewModel.score)
     }
 
     /*
@@ -55,6 +55,11 @@ class GameFragment : Fragment() {
     * Displays the next scrambled word.
     */
     private fun onSubmitWord() {
+        if (viewModel.nextWord()) {
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
     }
 
     /*
@@ -62,6 +67,12 @@ class GameFragment : Fragment() {
      * Increases the word count.
      */
     private fun onSkipWord() {
+        if (viewModel.nextWord()) {
+            setErrorTextField(false)
+            updateNextWordOnScreen()
+        } else {
+            showFinalScoreDialog()
+        }
     }
 
     /*
@@ -98,6 +109,28 @@ class GameFragment : Fragment() {
      */
     private fun updateNextWordOnScreen() {
         binding.textViewUnscrambledWord.text = viewModel.currentScrambledWord
+        binding.wordCount.text = getString(
+            R.string.word_count,
+            viewModel.currentWordCount,
+            MAX_NO_OF_WORDS
+        )
+    }
+
+    /**
+     * Creates and shows an AlertDialog with the final score.
+     */
+    private fun showFinalScoreDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.congratulations))
+            .setMessage(getString(R.string.you_scored, viewModel.score))
+            .setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ ->
+                exitGame()
+            }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ ->
+                restartGame()
+            }
+            .show()
     }
 
     override fun onDetach() {
