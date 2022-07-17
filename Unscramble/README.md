@@ -10,5 +10,8 @@ to make a word using all the letters from the displayed scrambled word.
 - Architecture
 - ViewModel
 - Dialog
+- Kotlin backing property
 
 ## Result
+
+[Unscramble.webm](https://user-images.githubusercontent.com/29587914/179380101-e48fe07b-9275-4dd0-8fc0-e57ad845b9fb.webm)
