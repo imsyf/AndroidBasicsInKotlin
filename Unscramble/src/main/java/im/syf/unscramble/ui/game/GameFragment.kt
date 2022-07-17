@@ -95,6 +95,8 @@ class GameFragment : Fragment() {
      * restart the game.
      */
     private fun restartGame() {
+        viewModel.reinitializeData()
+        binding.score.text = getString(R.string.score, viewModel.score)
         setErrorTextField(false)
         updateNextWordOnScreen()
     }
