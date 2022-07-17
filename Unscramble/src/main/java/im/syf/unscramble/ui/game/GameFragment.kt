@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -33,7 +34,7 @@ class GameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout XML file and return a binding object instance
-        _binding = FragmentGameBinding.inflate(inflater, container, false)
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
         Log.d("GameFragment", "GameFragment created/re-created!")
         with(viewModel) {
             val word = currentScrambledWord.value
