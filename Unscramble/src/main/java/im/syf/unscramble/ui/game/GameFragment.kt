@@ -1,7 +1,6 @@
 package im.syf.unscramble.ui.game
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,17 +34,6 @@ class GameFragment : Fragment() {
     ): View {
         // Inflate the layout XML file and return a binding object instance
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_game, container, false)
-        Log.d("GameFragment", "GameFragment created/re-created!")
-        with(viewModel) {
-            val word = currentScrambledWord.value
-            val count = currentWordCount.value
-            val score = score.value
-
-            Log.d(
-                "GameFragment",
-                "Word: $word; Score: $score; Count: $count;"
-            )
-        }
         return binding.root
     }
 
@@ -137,11 +125,6 @@ class GameFragment : Fragment() {
                 restartGame()
             }
             .show()
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        Log.d("GameFragment", "GameFragment destroyed!")
     }
 
     override fun onDestroyView() {

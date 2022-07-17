@@ -3,7 +3,6 @@ package im.syf.unscramble.ui.game
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.TtsSpan
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -43,7 +42,6 @@ class GameViewModel : ViewModel() {
     private lateinit var currentWord: String
 
     init {
-        Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
     }
 
@@ -100,10 +98,5 @@ class GameViewModel : ViewModel() {
 
     private fun increaseScore() {
         _score.value = _score.value?.plus(SCORE_INCREASE)
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d("GameFragment", "GameViewModel destroyed!")
     }
 }
