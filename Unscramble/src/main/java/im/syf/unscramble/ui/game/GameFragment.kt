@@ -56,6 +56,12 @@ class GameFragment : Fragment() {
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
 
+        with(binding) {
+            lifecycleOwner = viewLifecycleOwner
+            gameViewModel = viewModel
+            maxNoOfWords = MAX_NO_OF_WORDS
+        }
+
         // Observe the currentScrambledWord LiveData
         viewModel.currentScrambledWord.observe(viewLifecycleOwner) {
             binding.textViewUnscrambledWord.text = it

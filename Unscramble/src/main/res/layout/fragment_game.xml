@@ -5,6 +5,14 @@
 
     <data>
 
+        <variable
+            name="gameViewModel"
+            type="im.syf.unscramble.ui.game.GameViewModel" />
+
+        <variable
+            name="maxNoOfWords"
+            type="int" />
+
     </data>
 
     <ScrollView
