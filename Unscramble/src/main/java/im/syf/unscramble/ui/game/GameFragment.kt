@@ -36,9 +36,11 @@ class GameFragment : Fragment() {
         _binding = FragmentGameBinding.inflate(inflater, container, false)
         Log.d("GameFragment", "GameFragment created/re-created!")
         with(viewModel) {
+            val word = currentScrambledWord.value
+
             Log.d(
                 "GameFragment",
-                "Word: $currentScrambledWord; Score: $score; Count: $currentWordCount;"
+                "Word: $word; Score: $score; Count: $currentWordCount;"
             )
         }
         return binding.root
@@ -54,6 +56,11 @@ class GameFragment : Fragment() {
         // Update the UI
         updateNextWordOnScreen()
         binding.score.text = getString(R.string.score, viewModel.score)
+
+        // Observe the currentScrambledWord LiveData
+        viewModel.currentScrambledWord.observe(viewLifecycleOwner) {
+            binding.textViewUnscrambledWord.text = it
+        }
     }
 
     /*
@@ -125,7 +132,6 @@ class GameFragment : Fragment() {
      * Displays the next scrambled word on screen.
      */
     private fun updateNextWordOnScreen() {
-        binding.textViewUnscrambledWord.text = viewModel.currentScrambledWord
         binding.wordCount.text = getString(
             R.string.word_count,
             viewModel.currentWordCount,
