@@ -45,8 +45,7 @@ class PickupFragment : Fragment() {
      * Navigate to the next screen to see the order summary.
      */
     fun goToNextScreen() {
-        val action = PickupFragmentDirections.toSummaryFragment()
-        findNavController().navigate(action)
+        findNavController().navigate(PickupFragmentDirections.toSummaryFragment())
     }
 
     fun cancelOrder() {
