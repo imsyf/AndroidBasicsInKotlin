@@ -45,8 +45,7 @@ class FlavorFragment : Fragment() {
      * Navigate to the next screen to choose pickup date.
      */
     fun goToNextScreen() {
-        val action = FlavorFragmentDirections.toPickupFragment()
-        findNavController().navigate(action)
+        findNavController().navigate(FlavorFragmentDirections.toPickupFragment())
     }
 
     fun cancelOrder() {

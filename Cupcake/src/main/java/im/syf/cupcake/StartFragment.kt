@@ -47,8 +47,7 @@ class StartFragment : Fragment() {
             orderViewModel.setFlavor(getString(R.string.vanilla))
         }
 
-        val action = StartFragmentDirections.toFlavorFragment()
-        findNavController().navigate(action)
+        findNavController().navigate(StartFragmentDirections.toFlavorFragment())
     }
 
     /**
