@@ -1,4 +1,4 @@
-![ic_launcher_sports](src/main/res/mipmap-xhdpi/ic_launcher_sports_round.png?raw=true) ![ic_launcher_unscramble](images/Screenshot_20220718_172700.png?raw=true)
+![ic_launcher_sports](src/main/res/mipmap-xhdpi/ic_launcher_sports_round.png?raw=true) ![ic_launcher_sports](images/Screenshot_20220718_172700.png?raw=true)
 
 # Sports
 
@@ -15,3 +15,5 @@ displays the selected sports news.
 - SlidingPaneLayout
 
 ## Result
+
+[Sports.webm](https://user-images.githubusercontent.com/29587914/179633927-ccd094a9-469b-4ca6-8d58-a2b1405d9043.webm)
