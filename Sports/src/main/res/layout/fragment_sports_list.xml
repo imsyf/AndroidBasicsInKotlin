@@ -19,6 +19,7 @@
         android:id="@+id/detail_container"
         android:name="im.syf.sports.NewsDetailsFragment"
         android:layout_width="300dp"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
 
 </androidx.slidingpanelayout.widget.SlidingPaneLayout>
