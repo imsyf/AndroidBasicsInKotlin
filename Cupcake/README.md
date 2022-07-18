@@ -16,7 +16,12 @@ order.
 - Formatting date and number
 - String resource plural
 - Implicit email intent
+- Unit test LiveData in ViewModel
 
 ## Result
 
 [Cupcake.webm](https://user-images.githubusercontent.com/29587914/179438961-411335a0-aacf-4d74-b829-08b6e1ea2a24.webm)
+
+### Unit test
+
+![Unit test LiveData](images/Screenshot_20220718_101022.png?raw=true)
