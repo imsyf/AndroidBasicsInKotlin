@@ -24,6 +24,12 @@ class SportsListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentSportsListBinding.bind(view)
 
+        // Connect the SlidingPaneLayout to the system back button.
+        requireActivity().onBackPressedDispatcher.addCallback(
+            viewLifecycleOwner,
+            SportsListOnBackPressedCallback(binding.slidingPaneLayout)
+        )
+
         // Initialize the adapter and set it to the RecyclerView.
         val adapter = SportsAdapter {
 
