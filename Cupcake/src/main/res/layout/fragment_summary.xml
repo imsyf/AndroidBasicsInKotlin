@@ -5,6 +5,10 @@
     <data>
 
         <variable
+            name="summaryFragment"
+            type="im.syf.cupcake.SummaryFragment" />
+
+        <variable
             name="viewModel"
             type="im.syf.cupcake.model.OrderViewModel" />
 
@@ -120,6 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
+                android:onClick="@{() -> summaryFragment.sendOrder()}"
                 android:text="@string/send" />
 
         </LinearLayout>
