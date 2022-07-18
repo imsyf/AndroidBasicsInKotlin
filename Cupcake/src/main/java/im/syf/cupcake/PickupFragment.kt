@@ -36,8 +36,8 @@ class PickupFragment : Fragment() {
 
         binding?.apply {
             lifecycleOwner = viewLifecycleOwner
+            pickupFragment = this@PickupFragment
             viewModel = orderViewModel
-            nextButton.setOnClickListener { goToNextScreen() }
         }
     }
 

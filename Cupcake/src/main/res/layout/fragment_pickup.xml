@@ -6,6 +6,10 @@
     <data>
 
         <variable
+            name="pickupFragment"
+            type="im.syf.cupcake.PickupFragment" />
+
+        <variable
             name="viewModel"
             type="im.syf.cupcake.model.OrderViewModel" />
 
@@ -94,6 +98,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
+                android:onClick="@{() -> pickupFragment.goToNextScreen()}"
                 android:text="@string/next"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

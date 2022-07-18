@@ -9,9 +9,12 @@ order.
 ## Topics covered in this module
 
 - Fragment
-- ViewModel
-- Data binding
-- LiveData
+- Shared ViewModel
+- Data binding: LifecycleOwner, listener bindings
+- LiveData: transformation
 - Jetpack Navigation component
+- Formatting date and number
 
 ## Result
+
+[Cupcake.webm](https://user-images.githubusercontent.com/29587914/179434583-227f45ff-bb22-461b-a1ff-3a39035511de.webm)
