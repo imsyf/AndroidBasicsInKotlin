@@ -44,6 +44,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    implementation 'androidx.slidingpanelayout:slidingpanelayout:1.2.0-beta01'
+
     implementation 'io.coil-kt:coil:1.1.1'
 
     testImplementation 'junit:junit:4.13.2'
