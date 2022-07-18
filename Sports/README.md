@@ -12,6 +12,6 @@ displays the selected sports news.
 - Coil image loader
 - RecyclerView ListAdapter with item diffing
 - List-detail pattern
-- 
+- SlidingPaneLayout
 
 ## Result
