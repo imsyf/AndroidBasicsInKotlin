@@ -12,9 +12,11 @@ order.
 - Shared ViewModel
 - Data binding: LifecycleOwner, listener bindings
 - LiveData: transformation
-- Jetpack Navigation component
+- Jetpack Navigation component: back stack, custom `popUpTo` attribute
 - Formatting date and number
+- String resource plural
+- Implicit email intent
 
 ## Result
 
-[Cupcake.webm](https://user-images.githubusercontent.com/29587914/179434583-227f45ff-bb22-461b-a1ff-3a39035511de.webm)
+[Cupcake.webm](https://user-images.githubusercontent.com/29587914/179438961-411335a0-aacf-4d74-b829-08b6e1ea2a24.webm)
