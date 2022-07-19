@@ -11,5 +11,12 @@ displayed on an order summary screen.
 - ViewModel
 - Data binding
 - Navigation
+- Instrumentation tests
 
 ## Result
+
+### Navigation tests
+
+![Navigation tests](images/Screenshot_20220719_132938.png?raw=true)
+
+[NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179683449-06c619c2-f612-420d-a429-8a2e2ae9e571.webm)
