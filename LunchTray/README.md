@@ -20,3 +20,17 @@ displayed on an order summary screen.
 ![Navigation tests](images/Screenshot_20220719_132938.png?raw=true)
 
 [NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179683449-06c619c2-f612-420d-a429-8a2e2ae9e571.webm)
+
+### Entree Screen tests
+
+Check if all entree menus are displayed
+
+![Entree menu tests](images/Screenshot_20220719_132559.png?raw=true)
+
+[EntreeMenuItemContent.webm](https://user-images.githubusercontent.com/29587914/179703637-90e37de3-c2bd-4186-b85b-15aeedfdc317.webm)
+
+Given a choice of entree, check if the right amount of subtotal is displayed
+
+![Entree subtotal tests](images/Screenshot_20220719_133715.png?raw=true)
+
+[RadioButtonsUpdateEntreeMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179727202-208e3f5d-1a19-473f-93a7-b83b3603dcdd.webm)
