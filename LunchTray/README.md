@@ -48,3 +48,17 @@ Given a choice of side dish, check if the right amount of subtotal is displayed
 ![Side subtotal tests](images/Screenshot_20220719_172527.png?raw=true)
 
 [RadioButtonsUpdateSideMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179730619-83c40b57-6bac-4544-b4b1-9c11437258e8.webm)
+
+### Accompaniment Screen tests
+
+Check if all accompaniment menus are displayed
+
+![Accompaniment menu tests](images/Screenshot_20220719_175539.png?raw=true)
+
+[AccompanimentMenuItemContent.webm](https://user-images.githubusercontent.com/29587914/179740707-c7115d7a-e9e4-4425-936c-3d43c416aa64.webm)
+
+Given a choice of accompaniment, check if the right amount of subtotal is displayed
+
+![Accompaniment subtotal tests](images/Screenshot_20220719_175737.png?raw=true)
+
+[RadioButtonsUpdateAccompanimentMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179740722-4c4d2f65-414d-4ca1-9ae0-b78636714124.webm)

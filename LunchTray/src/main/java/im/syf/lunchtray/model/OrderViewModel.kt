@@ -105,14 +105,25 @@ class OrderViewModel : ViewModel() {
     fun setAccompaniment(accompaniment: String) {
         // TODO: if _accompaniment.value is not null, set the previous accompaniment price to the
         //  current accompaniment price.
+        _accompaniment.value?.let {
+            previousAccompanimentPrice = it.price
+        }
 
         // TODO: if _accompaniment.value is not null subtract the previous accompaniment price from
         //  the current subtotal value. This ensures that we only charge for the currently selected
         //  accompaniment.
+        _accompaniment.value?.let {
+            _subtotal.value = _subtotal.value?.minus(previousAccompanimentPrice)
+        }
 
         // TODO: set the current accompaniment value to the menu item corresponding to the passed in
         //  string
+        _accompaniment.value = menuItems[accompaniment]
+
         // TODO: update the subtotal to reflect the price of the selected accompaniment.
+        _accompaniment.value?.let {
+            updateSubtotal(it.price)
+        }
     }
 
     /**
