@@ -34,3 +34,17 @@ Given a choice of entree, check if the right amount of subtotal is displayed
 ![Entree subtotal tests](images/Screenshot_20220719_133715.png?raw=true)
 
 [RadioButtonsUpdateEntreeMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179727202-208e3f5d-1a19-473f-93a7-b83b3603dcdd.webm)
+
+### Side Screen tests
+
+Check if all side dish menus are displayed
+
+![Side menu tests](images/Screenshot_20220719_172922.png?raw=true)
+
+[SideMenuItemContent.webm](https://user-images.githubusercontent.com/29587914/179730628-c3af49a9-da75-4ada-9c39-e4170df852de.webm)
+
+Given a choice of side dish, check if the right amount of subtotal is displayed
+
+![Side subtotal tests](images/Screenshot_20220719_172527.png?raw=true)
+
+[RadioButtonsUpdateSideMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179730619-83c40b57-6bac-4544-b4b1-9c11437258e8.webm)
