@@ -4,6 +4,7 @@ import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
@@ -128,14 +129,14 @@ class OrderFunctionalityTests : BaseTest() {
         // We already have a test for a single menu item selection, so we don't need to check the
         // subtotal here.
         // Move to next fragment
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select side item
         onView(withId(R.id.salad)).perform(click())
         // Check that subtotal has updated
         onView(withId(R.id.subtotal))
             .check(matches(withText(containsString("Subtotal: $9.50"))))
         // Move to next fragment
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select accompaniment item
         onView(withId(R.id.bread)).perform(click())
         // Check that subtotal has updated

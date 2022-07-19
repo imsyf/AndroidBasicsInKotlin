@@ -62,3 +62,19 @@ Given a choice of accompaniment, check if the right amount of subtotal is displa
 ![Accompaniment subtotal tests](images/Screenshot_20220719_175737.png?raw=true)
 
 [RadioButtonsUpdateAccompanimentMenuSubtotal.webm](https://user-images.githubusercontent.com/29587914/179740722-4c4d2f65-414d-4ca1-9ae0-b78636714124.webm)
+
+### Checkout Screen tests
+
+Given a choice of entree, side dish and accompaniment, check if the right amount of subtotal is
+displayed
+
+![Checkout subtotal tests](images/Screenshot_20220719_195350.png?raw=true)
+
+[SubtotalTaxTotalInCheckout.webm](https://user-images.githubusercontent.com/29587914/179756323-ea268bea-921b-44e8-bb04-f98807ba4913.webm)
+
+Given a choice of entree, side dish and accompaniment, check if the right amount of subtotal, tax
+and total are all displayed
+
+![Checkout total tests](images/Screenshot_20220719_195632.png?raw=true)
+
+[SubtotalUpdatesInFullOrderFlow.webm](https://user-images.githubusercontent.com/29587914/179756344-a6164498-1eeb-4de9-94ab-203ba591d989.webm)
