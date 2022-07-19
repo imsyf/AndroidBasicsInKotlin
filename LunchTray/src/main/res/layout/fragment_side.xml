@@ -42,6 +42,8 @@
                     android:id="@+id/salad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["salad"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("salad")}'
                     android:text='@{viewModel.menuItems["salad"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Side 1" />
@@ -72,6 +74,8 @@
                     android:id="@+id/soup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["soup"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("soup")}'
                     android:text='@{viewModel.menuItems["soup"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Side 2" />
@@ -103,6 +107,8 @@
                     android:id="@+id/potatoes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["potatoes"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("potatoes")}'
                     android:text='@{viewModel.menuItems["potatoes"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Side 3" />
@@ -133,6 +139,8 @@
                     android:id="@+id/rice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked='@{viewModel.side.name.equals(viewModel.menuItems["rice"].name)}'
+                    android:onClick='@{() -> viewModel.setSide("rice")}'
                     android:text='@{viewModel.menuItems["rice"].name}'
                     android:textAppearance="?attr/textAppearanceBody1"
                     tools:text="Side 4" />
@@ -166,6 +174,7 @@
             <TextView
                 android:id="@+id/subtotal"
                 style="@style/Widget.LunchTray.TextView.Subtotal"
+                android:text="@{@string/subtotal(viewModel.subtotal)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/divider"
                 tools:text="Subtotal $5.00" />
