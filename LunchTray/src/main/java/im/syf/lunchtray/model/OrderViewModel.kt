@@ -56,12 +56,23 @@ class OrderViewModel : ViewModel() {
     fun setEntree(entree: String) {
         // TODO: if _entree.value is not null, set the previous entree price to the current
         //  entree price.
+        _entree.value?.let {
+            previousEntreePrice = it.price
+        }
 
         // TODO: if _subtotal.value is not null subtract the previous entree price from the current
         //  subtotal value. This ensures that we only charge for the currently selected entree.
+        _subtotal.value?.let {
+            _subtotal.value = it - previousEntreePrice
+        }
 
         // TODO: set the current entree value to the menu item corresponding to the passed in string
+        _entree.value = menuItems[entree]
+
         // TODO: update the subtotal to reflect the price of the selected entree.
+        _entree.value?.let {
+            updateSubtotal(it.price)
+        }
     }
 
     /**
@@ -100,8 +111,14 @@ class OrderViewModel : ViewModel() {
         // TODO: if _subtotal.value is not null, update it to reflect the price of the recently
         //  added item.
         //  Otherwise, set _subtotal.value to equal the price of the item.
+        if (_subtotal.value != null) {
+            _subtotal.value = _subtotal.value?.plus(itemPrice)
+        } else {
+            _subtotal.value = itemPrice
+        }
 
         // TODO: calculate the tax and resulting total
+        calculateTaxAndTotal()
     }
 
     /**
@@ -109,7 +126,12 @@ class OrderViewModel : ViewModel() {
      */
     fun calculateTaxAndTotal() {
         // TODO: set _tax.value based on the subtotal and the tax rate.
+        _tax.value = _subtotal.value?.times(taxRate)
+
         // TODO: set the total based on the subtotal and _tax.value.
+        _tax.value?.let {
+            _total.value = _subtotal.value?.plus(it)
+        }
     }
 
     /**
