@@ -3,6 +3,7 @@ package im.syf.lunchtray
 import androidx.test.core.app.launchActivity
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.matcher.ViewMatchers.withId
 
 open class BaseTest {
@@ -15,11 +16,11 @@ open class BaseTest {
         // Select entree item
         onView(withId(R.id.cauliflower)).perform(click())
         // Move to next fragment
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select side item
         onView(withId(R.id.salad)).perform(click())
         // Move to next fragment
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select accompaniment item
         onView(withId(R.id.bread)).perform(click())
         // Move to next fragment
