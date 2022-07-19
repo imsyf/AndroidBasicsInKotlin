@@ -6,6 +6,13 @@
     tools:context=".ui.order.CheckoutFragment">
 
     <!-- TODO: Add the data binding variables of the type OrderViewModel and the CheckoutFragment -->
+    <data>
+
+        <variable
+            name="checkoutFragment"
+            type="im.syf.lunchtray.ui.order.CheckoutFragment" />
+
+    </data>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -113,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/side_margin"
+                android:onClick="@{() -> checkoutFragment.submitOrder()}"
                 android:text="@string/submit"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +133,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/base_margin"
+                android:onClick="@{() -> checkoutFragment.cancelOrder()}"
                 android:text="@string/cancel"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
