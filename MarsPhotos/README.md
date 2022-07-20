@@ -7,8 +7,25 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 
 ## Topics covered in this module
 
-- ViewModel
+- ViewModel: call suspend function inside its built-in coroutine scope
 - LiveData
 - Data binding
+- Internet permission
+- Kotlin object singleton and lazy initialization
+- Retrofit: send request to REST API endpoint
+- Parse JSON response as plain text
 
 ## Result
+
+<table>
+  <tr>
+    <th>Response</th>
+    <th>Success</th>
+    <th>Error</th>
+  </tr>
+  <tr>
+    <td>Plain text</td>
+    <td><img src="images/Screenshot_20220720_150626.png?raw=true" /></td>
+    <td><img src="images/Screenshot_20220720_150723.png?raw=true" /></td>
+  </tr>
+</table>
