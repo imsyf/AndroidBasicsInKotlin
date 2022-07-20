@@ -6,9 +6,6 @@
     </style>
 
     <!-- TextView style -->
-    <style name="Widget.LunchTray.TextView" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
-    </style>
 
     <!-- Radio Button style -->
     <style name="Widget.LunchTray.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">

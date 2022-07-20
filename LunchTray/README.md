@@ -19,7 +19,7 @@ displayed on an order summary screen.
 
 ![Navigation tests](images/Screenshot_20220719_132938.png?raw=true)
 
-[NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179683449-06c619c2-f612-420d-a429-8a2e2ae9e571.webm)
+[NavigationTests.webm](https://user-images.githubusercontent.com/29587914/179872370-73c43556-2d12-42ff-9c91-99f16e24511d.webm)
 
 ### Entree Screen tests
 
