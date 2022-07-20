@@ -64,6 +64,7 @@ class AccompanimentFragment : Fragment() {
      */
     fun cancelOrder() {
         // TODO: Reset order in view model
+        sharedViewModel.resetOrder()
         // TODO: Navigate back to the [StartFragment] to start over
         findNavController().navigate(AccompanimentFragmentDirections.toStartOrderFragment())
     }

@@ -180,7 +180,7 @@ class OrderFunctionalityTests : BaseTest() {
         // Select an item
         onView(withId(R.id.cauliflower)).perform(click())
         // Cancel order
-        onView(withId(R.id.cancel_button)).perform(click())
+        onView(withId(R.id.cancel_button)).perform(scrollTo(), click())
         // Start the order
         onView(withId(R.id.start_order_btn)).perform(click())
         // Make sure subtotal is zero
@@ -199,11 +199,11 @@ class OrderFunctionalityTests : BaseTest() {
         // Select an item
         onView(withId(R.id.cauliflower)).perform(click())
         // Move to side menu
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select an item
         onView(withId(R.id.soup)).perform(click())
         // Cancel the order
-        onView(withId(R.id.cancel_button)).perform(click())
+        onView(withId(R.id.cancel_button)).perform(scrollTo(), click())
         // Start the order
         onView(withId(R.id.start_order_btn)).perform(click())
         // Make sure subtotal is zero
@@ -222,15 +222,15 @@ class OrderFunctionalityTests : BaseTest() {
         // Select an item
         onView(withId(R.id.cauliflower)).perform(click())
         // Move to side menu
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select an item
         onView(withId(R.id.soup)).perform(click())
         // Move to accompaniment menu
-        onView(withId(R.id.next_button)).perform(click())
+        onView(withId(R.id.next_button)).perform(scrollTo(), click())
         // Select item
         onView(withId(R.id.bread)).perform(click())
         // Cancel the order
-        onView(withId(R.id.cancel_button)).perform(click())
+        onView(withId(R.id.cancel_button)).perform(scrollTo(), click())
         // Start the order
         onView(withId(R.id.start_order_btn)).perform(click())
         // Make sure subtotal is zero

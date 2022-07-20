@@ -78,3 +78,35 @@ and total are all displayed
 ![Checkout total tests](images/Screenshot_20220719_195632.png?raw=true)
 
 [SubtotalUpdatesInFullOrderFlow.webm](https://user-images.githubusercontent.com/29587914/179756344-a6164498-1eeb-4de9-94ab-203ba591d989.webm)
+
+### Cancel Order tests
+
+From entree menu
+
+![Cancel order from entree menu tests](images/Screenshot_20220720_055243.png?raw=true)
+
+[CancelFromEntreeMenu.webm](https://user-images.githubusercontent.com/29587914/179861905-826daa4d-a0e5-4a4f-b907-033b1f0639a3.webm)
+
+From side menu
+
+![Cancel order from side menu tests](images/Screenshot_20220720_060202.png?raw=true)
+
+[CancelFromSideMenu.webm](https://user-images.githubusercontent.com/29587914/179862874-a362a880-9013-414a-a6b5-f2b2309a5a34.webm)
+
+From accompaniment menu
+
+![Cancel order from accompaniment menu tests](images/Screenshot_20220720_064341.png?raw=true)
+
+[CancelFromAccompanimentMenu.webm](https://user-images.githubusercontent.com/29587914/179866516-ee2ba4aa-f33d-4269-89db-c97add30adba.webm)
+
+From checkout
+
+![Cancel order from checkout tests](images/Screenshot_20220720_064902.png?raw=true)
+
+[CancelFromCheckout.webm](https://user-images.githubusercontent.com/29587914/179866987-b427eb2e-6cb5-44ac-81cf-c77936ba1df9.webm)
+
+### Submit Order tests
+
+![Submit order tests](images/Screenshot_20220720_065540.png?raw=true)
+
+[SubmitOrder.webm](https://user-images.githubusercontent.com/29587914/179868110-90fc66ee-c05f-4170-babb-36c8285c494f.webm)
