@@ -13,19 +13,17 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 - Internet permission
 - Kotlin object singleton and lazy initialization
 - Retrofit: send request to REST API endpoint
-- Parse JSON response as plain text
+- Parse JSON response as Kotlin data class with Moshi
 
 ## Result
 
 <table>
   <tr>
-    <th>Response</th>
-    <th>Success</th>
-    <th>Error</th>
+    <th>Plain text</th>
+    <th>Data class</th>
   </tr>
   <tr>
-    <td>Plain text</td>
     <td><img src="images/Screenshot_20220720_150626.png?raw=true" /></td>
-    <td><img src="images/Screenshot_20220720_150723.png?raw=true" /></td>
+    <td><img src="images/Screenshot_20220720_152710.png?raw=true" /></td>
   </tr>
 </table>
