@@ -15,3 +15,7 @@ Learn about Android Studio's integrated debugger.
 - Set conditions for breakpoints
 
 [Screencast_07212022_112425.webm](https://user-images.githubusercontent.com/29587914/180129679-bcd3447d-770e-451d-95e0-50920f2a05a8.webm)
+
+- Use `Watches` to track specific variables
+
+[Screencast_07212022_113427.webm](https://user-images.githubusercontent.com/29587914/180130686-444bcf4e-f6aa-4ca5-8bf9-b9dcdc7ce92b.webm)
