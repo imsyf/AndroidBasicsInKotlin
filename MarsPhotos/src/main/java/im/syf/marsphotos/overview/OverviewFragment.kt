@@ -25,6 +25,8 @@ class OverviewFragment : Fragment() {
 
             // Giving the binding access to the OverviewViewModel
             viewModel = overviewViewModel
+
+            photosGrid.adapter = PhotoGridAdapter()
         }
 
         return binding.root
