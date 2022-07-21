@@ -9,11 +9,13 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 
 - ViewModel: call suspend function inside its built-in coroutine scope
 - LiveData
-- Data binding
+- Data binding: custom adapters
 - Internet permission
 - Kotlin object singleton and lazy initialization
 - Retrofit: send request to REST API endpoint
 - Parse JSON response as Kotlin data class with Moshi
+- Coil: load image from URL, set placeholder and fallback image
+- Animated drawable
 
 ## Result
 
