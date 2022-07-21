@@ -9,7 +9,7 @@ import im.syf.amphibians.databinding.ListViewItemBinding
 import im.syf.amphibians.network.Amphibian
 
 class AmphibianListAdapter(
-    val clickListener: AmphibianListener
+    private val clickListener: AmphibianListener
 ) : ListAdapter<Amphibian, AmphibianListAdapter.AmphibianViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AmphibianViewHolder {
