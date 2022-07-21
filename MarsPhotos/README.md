@@ -9,6 +9,7 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 
 - ViewModel: call suspend function inside its built-in coroutine scope
 - LiveData
+- RecyclerView: ListAdapter with item diffing
 - Data binding: custom adapters
 - Internet permission
 - Kotlin object singleton and lazy initialization
