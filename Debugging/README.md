@@ -11,3 +11,7 @@ Learn about Android Studio's integrated debugger.
 - Monitor variables value
 
 [Screencast_07212022_105310.webm](https://user-images.githubusercontent.com/29587914/180127586-c9e44b23-def9-4d40-958b-80dacc175203.webm)
+
+- Set conditions for breakpoints
+
+[Screencast_07212022_112425.webm](https://user-images.githubusercontent.com/29587914/180129679-bcd3447d-770e-451d-95e0-50920f2a05a8.webm)
