@@ -13,7 +13,7 @@ screen to display a list of amphibians species, and another to see their detaile
 - Navigation: with safe args
 - Data binding: custom binding adapters
 - Internet permission
-- Kotlin: object singleton, lazy initialization, enum class
+- Kotlin: object singleton, lazy initialization, enum class, single abstract method (SAM)
 - Retrofit: send request to REST API endpoint
 - Parse JSON response as Kotlin data class with Moshi
 - Animated drawable

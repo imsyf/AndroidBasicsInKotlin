@@ -24,14 +24,12 @@ class AmphibianListFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             viewModel = amphibianViewModel
 
-            recyclerView.adapter = AmphibianListAdapter(
-                AmphibianListener {
-                    amphibianViewModel.onAmphibianClicked(it)
-                    findNavController().navigate(
-                        AmphibianListFragmentDirections.toAmphibianDetailFragment()
-                    )
-                }
-            )
+            recyclerView.adapter = AmphibianListAdapter {
+                amphibianViewModel.onAmphibianClicked(it)
+                findNavController().navigate(
+                    AmphibianListFragmentDirections.toAmphibianDetailFragment()
+                )
+            }
         }
 
         return binding.root
