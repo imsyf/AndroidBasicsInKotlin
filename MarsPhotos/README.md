@@ -12,7 +12,7 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 - RecyclerView: ListAdapter with item diffing
 - Data binding: custom adapters
 - Internet permission
-- Kotlin object singleton and lazy initialization
+- Kotlin: object singleton, lazy initialization, enum class
 - Retrofit: send request to REST API endpoint
 - Parse JSON response as Kotlin data class with Moshi
 - Coil: load image from URL, set placeholder and fallback image
@@ -20,13 +20,4 @@ by NASA's Mars rovers. The data is stored on a Web server as a REST web service.
 
 ## Result
 
-<table>
-  <tr>
-    <th>Plain text</th>
-    <th>Data class</th>
-  </tr>
-  <tr>
-    <td><img src="images/Screenshot_20220720_150626.png?raw=true" /></td>
-    <td><img src="images/Screenshot_20220720_152710.png?raw=true" /></td>
-  </tr>
-</table>
+[MarsPhotos.webm](https://user-images.githubusercontent.com/29587914/180118635-5a61900a-2744-4b5a-bcdd-47f8bc1b06ec.webm)
