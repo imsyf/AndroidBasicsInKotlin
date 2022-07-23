@@ -9,6 +9,7 @@ Add, update, sell, and delete items from the local database.
 - RecyclerView
 - Navigation: with safe args
 - Room: entity, DAO, database
+- ViewModel: factory
 - Kotlin: `@Volatile` annotation
 
 ## Result
