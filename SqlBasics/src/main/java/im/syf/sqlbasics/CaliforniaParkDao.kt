@@ -10,6 +10,6 @@ interface CaliforniaParkDao {
     @Insert
     suspend fun insertAll(parks: List<CaliforniaPark>)
 
-    @Query("SELECT * FROM park")
+    @Query("SELECT * FROM calipark")
     suspend fun getAll(): List<CaliforniaPark>
 }
