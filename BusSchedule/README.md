@@ -6,7 +6,7 @@ first screen will display a list of all arrival times for that particular stop.
 ## Topics covered in this module
 
 - Room
-- Kotlin Coroutine: scope, context, return value
+- Kotlin Coroutine: scope, context, return value, flow
 - RecyclerView: ListAdapter with item diffing
 - Navigation: with safe args
 - ViewModel
