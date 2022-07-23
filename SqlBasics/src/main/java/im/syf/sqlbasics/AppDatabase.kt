@@ -10,6 +10,7 @@ import androidx.room.RoomDatabase
         CaliforniaPark::class,
     ],
     version = 1,
+    exportSchema = false,
 )
 abstract class AppDatabase : RoomDatabase() {
 
@@ -22,7 +23,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         fun getDatabase(context: Context): AppDatabase = INSTANCE ?: synchronized(this) {
             val instance = Room.databaseBuilder(context, AppDatabase::class.java, "app_database")
-                .createFromAsset("database/sql_basics.db")
+                .createFromAsset("database/calipark.sqli")
                 .build()
 
             INSTANCE = instance

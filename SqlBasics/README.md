@@ -11,6 +11,9 @@ Database Inspector.
 
 - Room
 - SQL queries
-- Database Inspector
+- ~~Database
+  Inspector~~ [Android Debug Database](https://github.com/amitshekhariitbhu/Android-Debug-Database)
 
 ## Result
+
+[Screencast_07232022_013557.webm](https://user-images.githubusercontent.com/29587914/180593618-b9a24baf-f41c-49d2-be94-41bebdc1891c.webm)
