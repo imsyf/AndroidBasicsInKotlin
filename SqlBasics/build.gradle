@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "im.syf.sqlbasics"
-        minSdk 26   // required for Database Inspector
+        minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -47,4 +47,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    debugImplementation 'com.github.amitshekhariitbhu.Android-Debug-Database:debug-db:1.0.6'
 }
