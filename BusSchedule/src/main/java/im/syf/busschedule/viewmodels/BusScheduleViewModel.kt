@@ -1,22 +1,17 @@
 package im.syf.busschedule.viewmodels
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import im.syf.busschedule.database.schedule.Schedule
 import im.syf.busschedule.database.schedule.ScheduleDao
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.Flow
 
 class BusScheduleViewModel(
     private val scheduleDao: ScheduleDao,
 ) : ViewModel() {
 
-    suspend fun fullSchedule(): List<Schedule> =
-        withContext(viewModelScope.coroutineContext) {
-            scheduleDao.getAll()
-        }
+    fun fullSchedule(): Flow<List<Schedule>> =
+        scheduleDao.getAll()
 
-    suspend fun scheduleForStopName(name: String): List<Schedule> =
-        withContext(viewModelScope.coroutineContext) {
-            scheduleDao.getByStopName(name)
-        }
+    fun scheduleForStopName(name: String): Flow<List<Schedule>> =
+        scheduleDao.getByStopName(name)
 }
