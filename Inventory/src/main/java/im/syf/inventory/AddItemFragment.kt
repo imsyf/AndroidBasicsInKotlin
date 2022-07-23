@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import im.syf.inventory.data.Item
 import im.syf.inventory.databinding.FragmentAddItemBinding
 
 /**
@@ -20,6 +23,13 @@ class AddItemFragment : Fragment() {
     private var _binding: FragmentAddItemBinding? = null
     private val binding get() = _binding!!
 
+    private val viewModel: InventoryViewModel by activityViewModels {
+        val inventoryApplication = activity?.application as InventoryApplication
+        InventoryViewModelFactory(inventoryApplication.database.itemDao())
+    }
+
+    lateinit var item: Item
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,6 +37,34 @@ class AddItemFragment : Fragment() {
     ): View {
         _binding = FragmentAddItemBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.saveAction.setOnClickListener {
+            addNewItem()
+        }
+    }
+
+    private fun addNewItem() {
+        if (isEntryValid()) {
+            viewModel.addNewItem(
+                binding.itemName.text.toString(),
+                binding.itemPrice.text.toString(),
+                binding.itemCount.text.toString(),
+            )
+
+            findNavController().navigate(AddItemFragmentDirections.toItemListFragment())
+        }
+    }
+
+    private fun isEntryValid(): Boolean {
+        return viewModel.isEntryValid(
+            binding.itemName.text.toString(),
+            binding.itemPrice.text.toString(),
+            binding.itemCount.text.toString()
+        )
     }
 
     /**
