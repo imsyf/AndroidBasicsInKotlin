@@ -23,6 +23,8 @@ class ItemDetailFragment : Fragment() {
     private var _binding: FragmentItemDetailBinding? = null
     private val binding get() = _binding!!
 
+    lateinit var item: Item
+
     private val viewModel: InventoryViewModel by activityViewModels {
         val inventoryApplication = activity?.application as InventoryApplication
         InventoryViewModelFactory(inventoryApplication.database.itemDao())
@@ -41,6 +43,7 @@ class ItemDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.retrieveItem(args.itemId).observe(viewLifecycleOwner) {
+            item = it
             bind(it)
         }
     }
@@ -53,6 +56,10 @@ class ItemDetailFragment : Fragment() {
         sellItem.isEnabled = viewModel.isStockAvailable(item)
         sellItem.setOnClickListener {
             viewModel.sellItem(item)
+        }
+
+        deleteItem.setOnClickListener {
+            showConfirmationDialog()
         }
     }
 
@@ -75,6 +82,7 @@ class ItemDetailFragment : Fragment() {
      * Deletes the current item and navigates to the list fragment.
      */
     private fun deleteItem() {
+        viewModel.deleteItem(item)
         findNavController().navigateUp()
     }
 
