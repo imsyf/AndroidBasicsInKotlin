@@ -19,6 +19,16 @@ class InventoryViewModel(
         insertItem(newItem)
     }
 
+    fun updateItem(itemId: Int, itemName: String, itemPrice: String, itemCount: String) {
+        val updatedItem = Item(
+            id = itemId,
+            itemName = itemName,
+            itemPrice = itemPrice.toDouble(),
+            quantityInStock = itemCount.toInt()
+        )
+        updateItem(updatedItem)
+    }
+
     fun isEntryValid(itemName: String, itemPrice: String, itemCount: String): Boolean {
         if (itemName.isBlank() || itemPrice.isBlank() || itemCount.isBlank()) {
             return false
