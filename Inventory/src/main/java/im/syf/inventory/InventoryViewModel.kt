@@ -1,6 +1,8 @@
 package im.syf.inventory
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import im.syf.inventory.data.Item
 import im.syf.inventory.data.ItemDao
@@ -9,6 +11,8 @@ import kotlinx.coroutines.launch
 class InventoryViewModel(
     private val itemDao: ItemDao,
 ) : ViewModel() {
+
+    val allItems: LiveData<List<Item>> = itemDao.getItems().asLiveData()
 
     fun addNewItem(itemName: String, itemPrice: String, itemCount: String) {
         val newItem = getNewItemEntry(itemName, itemPrice, itemCount)
