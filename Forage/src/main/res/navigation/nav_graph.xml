@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/forageableListFragment">
+
+    <fragment
+        android:id="@+id/forageableListFragment"
+        android:name="im.syf.forage.ui.ForageableListFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_forageable_list">
+
+        <action
+            android:id="@+id/to_forageableDetailFragment"
+            app:destination="@id/forageableDetailFragment" />
+
+        <action
+            android:id="@+id/to_addForageableFragment"
+            app:destination="@id/addForageableFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/forageableDetailFragment"
+        android:name="im.syf.forage.ui.ForageableDetailFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_forageable_detail">
+
+        <action
+            android:id="@+id/to_addForageableFragment"
+            app:destination="@id/addForageableFragment" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addForageableFragment"
+        android:name="im.syf.forage.ui.AddForageableFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_add_forageable">
+
+        <action
+            android:id="@+id/to_forageableListFragment"
+            app:destination="@id/forageableListFragment" />
+
+        <argument
+            android:name="id"
+            android:defaultValue="0L"
+            app:argType="long" />
+
+    </fragment>
+
+</navigation>

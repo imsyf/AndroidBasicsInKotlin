@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Forage</string>
+    <string name="action_settings">Settings</string>
+    <string name="forageable_name">Name</string>
+    <string name="forageable_location">Location</string>
+    <string name="in_season">Currently in season</string>
+    <string name="out_of_season">Currently out of season</string>
+    <string name="notes">Notes</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+</resources>
