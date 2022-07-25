@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import im.syf.devbyte.data.DevByteRepository
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.io.IOException
 
@@ -44,6 +45,13 @@ class PlaylistViewModel(
                 _eventNetworkError.value = false
                 _isNetworkErrorShown.value = false
             } catch (networkError: IOException) {
+                // Give DAO a chance to return data
+                if (playlist.value.isNullOrEmpty()) {
+                    if (!_eventNetworkError.value!!) {
+                        delay(1)
+                    }
+                }
+
                 _eventNetworkError.value = playlist.value.isNullOrEmpty()
             }
         }
