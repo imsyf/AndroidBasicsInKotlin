@@ -13,10 +13,12 @@ data class VideoEntity(
     val thumbnail: String,
 )
 
-fun VideoEntity.toDevByteVideo() = DevByteVideo(
+fun VideoEntity.toDevByteVideo(): DevByteVideo = DevByteVideo(
     title = title,
     description = description,
     url = url,
     updated = updated,
     thumbnail = thumbnail,
 )
+
+fun List<VideoEntity>.toDevByteVideos(): List<DevByteVideo> = map(VideoEntity::toDevByteVideo)

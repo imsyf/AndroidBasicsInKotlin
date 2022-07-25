@@ -10,7 +10,7 @@ class AppContainer(context: Context) {
 
     private val database: DevByteRoomDatabase by lazy { DevByteRoomDatabase.getDatabase(context) }
 
-    val service: DevByteService by lazy {
+    private val service: DevByteService by lazy {
         DevByteApi.retrofit.create(DevByteService::class.java)
     }
 
