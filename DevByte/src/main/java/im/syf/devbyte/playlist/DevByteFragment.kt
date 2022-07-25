@@ -18,7 +18,7 @@ class DevByteFragment : Fragment() {
 
     private val playlistViewModel: PlaylistViewModel by viewModels {
         val devByteApp = activity?.application as DevByteApp
-        PlaylistViewModelFactory(devByteApp.container.service)
+        PlaylistViewModelFactory(devByteApp.container.repository)
     }
 
     private var _binding: FragmentDevByteBinding? = null
