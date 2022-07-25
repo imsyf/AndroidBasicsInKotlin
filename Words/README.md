@@ -20,10 +20,11 @@ The app demonstrates the use of Intents in two ways:
 - Layout manager(s)
 - Fragment
 - Navigation component: NavHost, graph, controller, safe args, testing
+- Preferences DataStore
 
 ## Result
 
-![Words](https://user-images.githubusercontent.com/29587914/178991718-8e6a445f-eb09-429b-b580-1ce73d08d36e.gif)
+[Words.webm](https://user-images.githubusercontent.com/29587914/180781353-54addd6f-cea0-4799-a118-21cd26767e7b.webm)
 
 ### Navigation test
 
