@@ -45,7 +45,9 @@
 
         <action
             android:id="@+id/to_forageableListFragment"
-            app:destination="@id/forageableListFragment" />
+            app:destination="@id/forageableListFragment"
+            app:popUpTo="@id/forageableListFragment"
+            app:popUpToInclusive="true" />
 
         <argument
             android:name="id"
