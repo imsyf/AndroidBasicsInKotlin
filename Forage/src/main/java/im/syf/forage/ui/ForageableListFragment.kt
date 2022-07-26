@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import im.syf.forage.BaseApplication
 import im.syf.forage.databinding.FragmentForageableListBinding
 import im.syf.forage.ui.adapter.ForageableListAdapter
 import im.syf.forage.ui.viewmodel.ForageableViewModel
@@ -16,10 +17,10 @@ class ForageableListFragment : Fragment() {
     private var _binding: FragmentForageableListBinding? = null
     private val binding get() = _binding!!
 
-    // TODO: Refactor the creation of the view model to take an instance of
-    //  ForageableViewModelFactory. The factory should take an instance of the Database retrieved
-    //  from BaseApplication
-    private val viewModel: ForageableViewModel by activityViewModels()
+    private val viewModel: ForageableViewModel by activityViewModels {
+        val app = activity?.application as BaseApplication
+        ForageableViewModel.Factory(app.database.forageableDao())
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,7 +39,7 @@ class ForageableListFragment : Fragment() {
             findNavController().navigate(action)
         }
 
-        // TODO: observe the list of forageables from the view model and submit it the adapter
+        viewModel.forageables.observe(viewLifecycleOwner, adapter::submitList)
 
         with(binding) {
             recyclerView.adapter = adapter

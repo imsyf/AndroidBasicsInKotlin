@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import im.syf.forage.BaseApplication
 import im.syf.forage.databinding.FragmentAddForageableBinding
 import im.syf.forage.model.Forageable
 import im.syf.forage.ui.viewmodel.ForageableViewModel
@@ -24,10 +25,10 @@ class AddForageableFragment : Fragment() {
     private var _binding: FragmentAddForageableBinding? = null
     private val binding get() = _binding!!
 
-    // TODO: Refactor the creation of the view model to take an instance of
-    //  ForageableViewModelFactory. The factory should take an instance of the Database retrieved
-    //  from BaseApplication
-    private val viewModel: ForageableViewModel by activityViewModels()
+    private val viewModel: ForageableViewModel by activityViewModels {
+        val app = activity?.application as BaseApplication
+        ForageableViewModel.Factory(app.database.forageableDao())
+    }
 
     private lateinit var forageable: Forageable
 
@@ -44,7 +45,10 @@ class AddForageableFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (args.id > 0) {
-            // TODO: Observe a Forageable that is retrieved by id, set the forageable variable, and call the bindForageable method
+            viewModel.getForageable(args.id).observe(viewLifecycleOwner) {
+                forageable = it
+                bindForageable(it)
+            }
 
             binding.deleteBtn.visibility = View.VISIBLE
             binding.deleteBtn.setOnClickListener {
