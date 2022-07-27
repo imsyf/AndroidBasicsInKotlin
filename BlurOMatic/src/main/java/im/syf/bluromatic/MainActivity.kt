@@ -33,11 +33,30 @@ class MainActivity : AppCompatActivity() {
 
             if (workInfo.state.isFinished) {
                 showWorkFinished()
+
+                // Normally this processing, which is not directly related to drawing views on
+                // screen would be in the ViewModel. For simplicity we are keeping it here.
+                val outputImageUri = workInfo.outputData.getString(KEY_IMAGE_URI)
+
+                // If there is an output file show "See File" button
+                if (!outputImageUri.isNullOrEmpty()) {
+                    viewModel.setOutputUri(outputImageUri)
+                    binding.seeFileButton.visibility = View.VISIBLE
+                }
             }
             else {
                 showWorkInProgress()
             }
         }
+
+        // Setup view output image file button
+        binding.seeFileButton.setOnClickListener {
+            viewModel.outputUri?.let { currentUri ->
+                val actionView = Intent(Intent.ACTION_VIEW, currentUri)
+                actionView.resolveActivity(packageManager)?.run {
+                    startActivity(actionView)
+                }
+            }
         }
     }
 
