@@ -1,5 +1,6 @@
 package im.syf.bluromatic
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
@@ -21,6 +22,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.goButton.setOnClickListener { viewModel.applyBlur(blurLevel) }
+
+        viewModel.outputWorkInfos.observe(this) {
+            // If there are no matching work info, do nothing
+            if (it.isNullOrEmpty()) return@observe
+
+            // We only care about the one output status.
+            // Every continuation has only one worker tagged TAG_OUTPUT
+            val workInfo = it[0]
+
+            if (workInfo.state.isFinished) {
+                showWorkFinished()
+            }
+            else {
+                showWorkInProgress()
+            }
+        }
+        }
     }
 
     /**
