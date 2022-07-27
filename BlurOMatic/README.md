@@ -9,3 +9,5 @@ An app that blurs photos and saves the result to a file.
 - WorkManager
 
 ## Result
+
+[Blur-O-Matic.webm](https://user-images.githubusercontent.com/29587914/181151492-d3db92e8-f376-418b-9119-a1fdf05b8104.webm)
