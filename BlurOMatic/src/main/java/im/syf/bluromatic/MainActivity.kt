@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.goButton.setOnClickListener { viewModel.applyBlur(blurLevel) }
+        binding.cancelButton.setOnClickListener { viewModel.cancelWork() }
 
         viewModel.outputWorkInfos.observe(this) {
             // If there are no matching work info, do nothing
