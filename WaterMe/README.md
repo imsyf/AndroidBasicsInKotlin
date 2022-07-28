@@ -9,4 +9,8 @@ Independent project for the final pathway of Android Basics in Kotlin Unit 6.
 - WorkManager
 - Testing with UI Automator
 
-## Result
+## Test Result
+
+![NotificationTest](images/Screenshot_20220728_074404.png?raw=true)
+
+[NotificationTest.webm](https://user-images.githubusercontent.com/29587914/181397121-94275a69-774c-4043-ada3-1888b2889893.webm)
